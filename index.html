@@ -25,13 +25,14 @@ SPEECH GENERATION/js"></script>
 
 <article>
     <header>
-        <h1>ADVERSARIAL SPEECH FOR VOICE PRIVACY PROTECTION AGAINST PERSONALIZED
-SPEECH GENERATION</h1>
+        <h1>Investigation into voice protection preserving human perception by speech generation</h1>
     </header>
 </article> 
-<div><b>Authors:</b> ShiHao Chen, Liping Chen, Jie Zhang, KongAik Lee, Zhen-Hua Ling, Li-Rong Dai</a> </div>
+<div><b>Authors:</b> XXX</a> </div>
  
-<div><b>Abstract:</b> The rapid progress in personalized speech generation technology, including personalized text-to-speech (TTS) and voice conversion (VC), poses a challenge in distinguishing between generated and real speech for human listeners, resulting in an urgent demand in protecting speakers' voices from malicious misuse. In this regard, we propose a speaker protection method based on adversarial attacks. The proposed method perturbs speech signals by minimally altering the original speech while rendering downstream speech generation models unable to accurately generate the voice of the target speaker. For validation, we employ the open-source pre-trained YourTTS model for speech generation and protect the target speaker's speech in the white-box scenario. Automatic speaker verification (ASV) evaluations were carried out on the generated speech as the assessment of the voice protection capability. Our experimental results show that we successfully perturbed the speaker encoder of the YourTTS model using the gradient-based I-FGSM adversarial perturbation method. Furthermore, the adversarial perturbation is effective in preventing the YourTTS model from generating the speech of the target speaker.
+<div><b>Abstract:</b>This paper focuses on a proactive voice protection method using speech generation, specifically employing VC to modify inherent speaker attributes during speech generation.
+        The disentanglement of speaker and non-speaker attributes, coupled with the fast gradient step method (FGSM) for adversarial attack on the speaker embedding, results in speaker-modified speech utterances.
+        Experiments carried out on the LibriSpeech dataset demonstrate that while some perturbed utterances maintain human-perceptible speaker attributes, automatic speaker verification evaluations reveal higher equal error rates compared to original and non-perturbed utterances. These findings preliminarily affirm the effectiveness of the speech generation approach in protecting speaker information from accurate perception by speaker recognition models without altering human perception.
 </div> 
 
 <br/>
@@ -39,7 +40,7 @@ SPEECH GENERATION</h1>
 <br/>
 
 
-Here, we showcase the adversarial samples generated using the I-FGSM method to attack the YourTTS model, along with the speech generated from both adversarial samples and reference speech. We randomly selected one sentence each from 2 males and 2 females and synthesized them using the Coqui TTS tool. In this context, 'Reference Speech' is defined as the original speech that is used as reference speech in YourTTS, 'IFGSM' as the speech with adversarial samples added, 'TTS' as the speech synthesized using Reference Speech for TTS, 'VC Source' as the source speech for VC, 'VC' as the speech synthesized using Reference Speech for VC, 'TTS*' as the speech synthesized using adversarial samples for TTS, and 'VC*' as the speech synthesized using adversarial samples for VC.<div>
+Here, we showcase the protected samples <div>
     <h3>1089</h3>
     
 	<table><tbody><tr>
