@@ -32,15 +32,7 @@ SPEECH GENERATION/js"></script>
 </article>
 <div><b>Authors:</b> XXX</a> </div>
 
-<div><b>Abstract:</b>This paper focuses on a proactive voice protection method using speech generation, specifically
-    employing VC to modify inherent speaker attributes during speech generation.
-    The disentanglement of speaker and non-speaker attributes, coupled with the fast gradient step method (FGSM) for
-    adversarial attack on the speaker embedding, results in speaker-modified speech utterances.
-    Experiments carried out on the LibriSpeech dataset demonstrate that while some perturbed utterances maintain
-    human-perceptible speaker attributes, automatic speaker verification evaluations reveal higher equal error rates
-    compared to original and non-perturbed utterances. These findings preliminarily affirm the effectiveness of the
-    speech generation approach in protecting speaker information from accurate perception by speaker recognition models
-    without altering human perception.
+<div><b>Abstract:</b>Voice anonymization has been developed as a technique for preserving privacy by replacing the speaker's voice in a speech signal with that of a pseudo-speaker, thereby obscuring the original voice attributes from machine recognition and human perception. In this paper, we focus on altering the voice attributes against machine recognition while retaining human perception. We referred to this as the asynchronous voice anonymization. To this end, a speech generation framework incorporating a speaker disentanglement mechanism is employed to generate the anonymized speech. The speaker attributes are altered through adversarial perturbation applied on the speaker embedding, while human perception is preserved by controlling the intensity of perturbation. Experiments conducted on the LibriSpeech dataset showed that the speaker attributes were obscured with their human perception preserved for 60.71% of the processed utterances. Audio samples can be found in 1.
 </div>
 
 <br/>
