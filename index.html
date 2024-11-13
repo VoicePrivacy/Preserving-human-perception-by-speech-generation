@@ -1,210 +1,315 @@
 <!-- saved from url=(0041)https://yaden2018.github.io/multispeaker/ -->
-<html>
+<html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Investigation into voice protection preserving human perception by speech generation
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation into voice protection preserving human perception by speech generation</title>
     <link rel="shortcut icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
     <link rel="icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
     <link rel="apple-touch-icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
+
+    <!-- Add some custom CSS for styling -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        article {
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        ol {
+            margin: 10px 0;
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+
+        ol li {
+            font-size: 1em;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+        }
+
+        table td audio {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            table td {
+                padding: 5px;
+            }
+
+            table td audio {
+                max-width: 100%;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
-<script type="text/javascript" async="" src="./ADVERSARIAL SPEECH FOR VOICE PRIVACY PROTECTION AGAINST PERSONALIZED
-SPEECH GENERATION/analytics.js.download"></script>
-<script async="" src="./ADVERSARIAL SPEECH FOR VOICE PRIVACY PROTECTION AGAINST PERSONALIZED
-SPEECH GENERATION/js"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
+    <script type="text/javascript" async src="./ADVERSARIAL SPEECH FOR VOICE PRIVACY PROTECTION AGAINST PERSONALIZED
+    SPEECH GENERATION/analytics.js.download"></script>
+    <script async src="./ADVERSARIAL SPEECH FOR VOICE PRIVACY PROTECTION AGAINST PERSONALIZED
+    SPEECH GENERATION/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('js', new Date());
-    gtag('config', 'UA-125850295-1');
-</script>
+        gtag('js', new Date());
+        gtag('config', 'UA-125850295-1');
+    </script>
 
-<article>
     <header>
         <h1>Asynchronous Voice Anonymization Using Adversarial Perturbation On Speaker Embedding</h1>
     </header>
-</article>
-<div><b>Authors:</b> Rui Wang, Liping Chen, Kong AiK Lee, Zhen-Hua Ling</a> </div>
 
-<div><b>Abstract:</b> Voice anonymization has been developed as a technique for preserving privacy by replacing the speaker's voice in a speech signal with that of a pseudo-speaker, thereby obscuring the original voice attributes from machine recognition and human perception. In this paper, we focus on altering the voice attributes against machine recognition while retaining human perception. We referred to this as the asynchronous voice anonymization. To this end, a speech generation framework incorporating a speaker disentanglement mechanism is employed to generate the anonymized speech. The speaker attributes are altered through adversarial perturbation applied on the speaker embedding, while human perception is preserved by controlling the intensity of perturbation. Experiments conducted on the LibriSpeech dataset showed that the speaker attributes were obscured with their human perception preserved for 60.71% of the processed utterances.
-</div>
+    <article>
+        <section>
+            <p><strong>Authors:</strong> Rui Wang, Liping Chen, Kong AiK Lee, Zhen-Hua Ling</p>
+            <p><strong>Abstract:</strong> Voice anonymization has been developed as a technique for preserving privacy by replacing the speaker's voice in a speech signal with that of a pseudo-speaker, thereby obscuring the original voice attributes from machine recognition and human perception. In this paper, we focus on altering the voice attributes against machine recognition while retaining human perception. We referred to this as asynchronous voice anonymization. To this end, a speech generation framework incorporating a speaker disentanglement mechanism is employed to generate the anonymized speech. The speaker attributes are altered through adversarial perturbation applied on the speaker embedding, while human perception is preserved by controlling the intensity of perturbation. Experiments conducted on the LibriSpeech dataset showed that the speaker attributes were obscured with their human perception preserved for 60.71% of the processed utterances.</p>
+        </section>
 
-<br/>
-<br/>
-<br/>
+        <section>
+            <p>Here, we showcase three kinds of speech utterances:</p>
+            <ol>
+                <li>The original speech;</li>
+                <li>The regenerated (regen) speech that the YourTTS model generated without modifying the speaker embedding vector;</li>
+                <li>The protected (prote) speech generated by adding perturbation to the speaker embedding.</li>
+            </ol>
+        </section>
 
+        <section>
+            <h2>1089</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Original:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/1089-134691-0010_ori.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Regenerated:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/1089-134691-0010_con.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Protected:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/1089-134691-0010_per.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-Here, we showcase three kinds of speech utterances:
-(1)the original speech;
-(2)the regenerated(regen) speech that the YourTTS model generated without
-modifying the speaker embedding
-vector;
-(3)the protected(prote) speech generated by adding perturbation to speaker embedding.
-<div>
-    <h3>1089</h3>
-    <table>
-        <tbody>
-        <tr>
-            <td>original:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/1089-134691-0010_ori.wav">
-                </audio>
-            </td>
-            <td></td>
+            <h2>1188</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Original:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/1188-133604-0035_ori.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Regenerated:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/1188-133604-0035_con.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Protected:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/1188-133604-0035_per.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <td>regenerated:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/1089-134691-0010_con.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>protected:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/1089-134691-0010_per.wav">
-                </audio>
-            </td>
-            <td></td>
+            <h2>121</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Original:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/121-127105-0018_ori.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Regenerated:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/121-127105-0018_con.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Protected:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/121-127105-0018_per.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        </tr>
-        </tbody>
-    </table>
+            <h2>2094</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Original:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/2094-142345-0042_ori.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Regenerated:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/2094-142345-0042_con.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Protected:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/2094-142345-0042_per.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3>1188</h3>
-    <table>
-        <tbody>
-        <tr>
-            <td>original:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/1188-133604-0035_ori.wav">
-                </audio>
-            </td>
-            <td></td>
-
-            <td>regenerated:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/1188-133604-0035_con.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>protected:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/1188-133604-0035_per.wav">
-                </audio>
-            </td>
-            <td></td>
-
-        </tr>
-        </tbody>
-    </table>
-
-    <h3>121</h3>
-    <table>
-        <tbody>
-        <tr>
-            <td>original:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/121-127105-0018_ori.wav">
-                </audio>
-            </td>
-            <td></td>
-
-            <td>regenerated:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/121-127105-0018_con.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>protected:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/121-127105-0018_per.wav">
-                </audio>
-            </td>
-            <td></td>
-
-        </tr>
-        </tbody>
-    </table>
-
-    <h3>2094</h3>
-    <table>
-        <tbody>
-        <tr>
-            <td>original:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/2094-142345-0042_ori.wav">
-                </audio>
-            </td>
-            <td></td>
-
-            <td>regenerated:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/2094-142345-0042_con.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>protected:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/2094-142345-0042_per.wav">
-                </audio>
-            </td>
-            <td></td>
-
-        </tr>
-        </tbody>
-    </table>
-
-    <h3>3575</h3>
-    <table>
-        <tbody>
-        <tr>
-            <td>original:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/3575-170457-0056_ori.wav">
-                </audio>
-            </td>
-            <td></td>
-
-            <td>regenerated:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/3575-170457-0056_con.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>protected:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/3575-170457-0056_per.wav">
-                </audio>
-            </td>
-            <td></td>
-
-        </tr>
-        </tbody>
-    </table>
-
-
-
-</div>
+            <h2>3575</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Original:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/3575-170457-0056_ori.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Regenerated:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/3575-170457-0056_con.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                        <td><strong>Protected:</strong></td>
+                        <td>
+                            <audio controls>
+                                <source src="wav/3575-170457-0056_per.wav">
+                            </audio>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
 
 </body>
+
 </html>
